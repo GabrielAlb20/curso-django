@@ -4,20 +4,12 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse('''<!DOCTYPE
-    <html>
-    <head><title>Olá mundo</title></head>
-    
-    
-    <body>
-        <h1>Olá Mundo</h1>
-    </body>
-    
-    <html>       
-    ''')
+    return  render(request, 'recipes/home.html', context={
+        'name': 'Gabriel Gomes'
+    })
 
 def contato(request):
-    return HttpResponse('CONTATO')
+    return render(request, 'me-apague/temp.html')
 
 def sobre(request):
     return HttpResponse('SOBRE')
