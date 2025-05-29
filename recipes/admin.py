@@ -1,10 +1,12 @@
 from django.contrib import admin
 from .models import Category, Recipe
 
-from .models import Category
-
-
 class CategoryAdmin(admin.ModelAdmin):
+    ...
+
+
+@admin.register(Recipe)
+class RecipeAdmin(admin.ModelAdmin):
     ...
 
 
