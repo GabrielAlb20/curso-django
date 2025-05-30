@@ -6,6 +6,7 @@ from django.conf import settings
 # domínio/recipes/sobre
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n')),
     path('', include('recipes.urls')), # /
 ]
 
